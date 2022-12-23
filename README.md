@@ -1,6 +1,7 @@
 # Cat Commands
 
 In this project we implement three cat commands in window using nodejs.
+We retrieve commands from CLI using ***process*** array.
 
 ## Commands 📝
 
@@ -10,4 +11,4 @@ In this project we implement three cat commands in window using nodejs.
 
 ## Tech Stack ⚒
 
-**Nodejs**
+**Javascript, Node.js & FS Module**
