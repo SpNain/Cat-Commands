@@ -9,7 +9,7 @@ We retrieve commands from CLI using
 - cat f1.txt f2.txt => show the contents of file f1.txt and f2.txt together
 
 
-## Flags 📝
+## Flags 🏁
 
 Example file <kbd>text.txt</kbd> :   
     
