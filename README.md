@@ -1,8 +1,7 @@
 # Cat Commands
 
-In this project we implement three cat commands in window using nodejs.
-We retrieve commands from CLI using 
-`process` array.
+In this project I implemented three cat commands in window using nodejs.
+We retrieve commands from CLI using `process` array.
 
 
 - cat f1.txt => show the output of the file f1.txt
