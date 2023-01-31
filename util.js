@@ -53,7 +53,7 @@ function applyBFlag(data) {  // ye jo data hai wo updated hoga ki nhi depend kar
   let splittedData = data.split("\r\n");
   for (let i = 0; i < splittedData.length; i++) {
     if (splittedData[i] != "") {
-      splittedData[i] = `${count}. ${splittedData[i]}`; //$(value) matlab jo value hogi wo aa jaayegi
+      splittedData[i] = `${count}. ${splittedData[i]}`; //${x} : x ki jo bhi vale hogi wo iss expression ki jgah aa jaayegi
       // splittedData[i] = count+". "+splittedData[i];
       count++;
     }

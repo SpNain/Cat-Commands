@@ -1,4 +1,4 @@
-// let clicmds = process; [#1]
+// let clicmds = process; # https://bit.ly/3WJA6km
 // console.log(clicmds);
   
 const { getFilesData, applySFlag, applyBFlag, applyNFlag } = require("./util"); // jis jis  ka naam likh rkha h wo wo m.e k obj se uthkar yaha aa jaayega
@@ -50,11 +50,3 @@ else if (flags.includes("-n")) {
 }
 
 console.log(filesData);
-
-/*
-#1.
-
-process ek array hota hai jisme hum jo bhi terminal/CLI(command line interface) pe likhte hai unko store krta hai 
-node aur agr koi js file di hai to uski location store hogi 
-aur agr koi normal command hai like flag txt file to unke naam store honge.
-*/
