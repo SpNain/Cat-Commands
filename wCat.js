@@ -1,15 +1,13 @@
-// let clicmds = process; # https://bit.ly/3WJA6km
-// console.log(clicmds);
-  
-const { getFilesData, applySFlag, applyBFlag, applyNFlag } = require("./util"); // jis jis  ka naam likh rkha h wo wo m.e k obj se uthkar yaha aa jaayega
-let contents = process.argv.slice(2);  //contents me process array se flag aur files ko as a array store karwa liya humne
+const { getFilesData, applySFlag, applyBFlag, applyNFlag } = require("./util");
+let contents = process.argv.slice(2);
+// console.log(contents);
 
-const flags = [];  //flag initialisation
-const files = [];   //files initialisation
+const flags = [];
+const files = [];
 
-for (let i = 0; i < contents.length; i++) {  // ye loop flag aur files ko distinguish kar dega
+for (let i = 0; i < contents.length; i++) {
     // "-s" , "-b" , "f1.txt" , "f2.txt" , "-n"
-  if (contents[i].startsWith("-")) {  // jiske base pe distinguidh krenge
+  if (contents[i].startsWith("-")) {
     flags.push(contents[i]);
   } else {
     files.push(contents[i]);
@@ -19,20 +17,20 @@ for (let i = 0; i < contents.length; i++) {  // ye loop flag aur files ko distin
 // -s -b -n
 // f1.txt // f2.txt
 
-let filesData = getFilesData(files);  //yaha se fxn call kiya , ab jo fxn util me likh rkha h  uske hisab se kaam dega ye
+let filesData = getFilesData(files);
 
-if (flags.includes("-s")) {  // check krega ki kahi lag aaray me -s flag h ki nhi
+if (flags.includes("-s")) {
   // filesData updated if s flag is present !
-  filesData = applySFlag(filesData);  // jo getFilesData se aaya hoga uspe -s flag lag jaayega
+  filesData = applySFlag(filesData);
 }
-// ab filesData me -s flag lag chuka h aur filesData update ho gya h
+
 // console.log(filesData);
 
 // when both -b and -n flags are present
-if (flags.includes("-b") && flags.includes("-n")) {  // check ki kahi dono flag  to nhi  
-  if (flags.indexOf("-b") < flags.indexOf("-n")) {  // agr h to index k base pe priorty milegi
-    // apply b flag  
-    filesData = applyBFlag(filesData);  
+if (flags.includes("-b") && flags.includes("-n")) {
+  if (flags.indexOf("-b") < flags.indexOf("-n")) {
+    // apply b flag
+    filesData = applyBFlag(filesData);
   } else {
     // apply n flag
     filesData = applyNFlag(filesData);
